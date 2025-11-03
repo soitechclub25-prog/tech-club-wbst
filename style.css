@@ -1,0 +1,472 @@
+/* fade in for everything */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body p,
+.wrapper,
+nav a,
+.headings-pg2{
+    opacity: 0;
+}
+
+.wrapper{
+    animation: fade-in 1s ease-out forwards;
+    display: inline-block;
+}
+
+.pages a {
+    animation: fade-in 0.6s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.motivation,
+.headings-pg2 {
+    animation: fade-in 0.6s ease-out forwards;
+    animation-delay: 0.55s
+}
+
+.content,
+.content-2,
+.about p{
+    animation: fade-in 0.6s ease-out forwards;
+    animation-delay: 0.7s;
+}
+
+footer p {
+    animation: fade-in 0.6s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+/* fade in for ppl */
+
+/* to be done */
+
+/* normal css starts here */
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    color: #ffffff;
+    opacity: 1;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #121A2E 0%, #1E3A8A 50%, #E4E9F2 100%);
+    background-color: #121A2E;
+    background-attachment:fixed;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.main-container{
+    flex: 1;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 8px;
+    background-color: #ADD8E6;
+    border-bottom: 2px solid #ADD8E6;
+    width: auto;
+}
+
+.soi, .tech-club{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    flex: 1;
+}
+
+.club-logo,
+.soi-logo{
+    height: 58px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: middle;
+}
+
+.club-logo {
+    border: 1px solid rgb(125, 249, 255);
+    transition: all 0.2s, transform 0.45s;
+}
+
+.club-logo:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 11px 11px rgba(125, 249, 255, 0.5);
+}
+
+/* .soi-logo{
+    border: none;
+    transition: all 0.2s, transform 1s;
+}
+
+.soi-logo:hover{
+    transform: scale(1.1) rotate(360deg);
+} */
+
+.brnd-name {
+    font-family: 'Montserrat', 'sans-serif';
+    color: #2D2D2D;
+    margin: 0px;
+    font-size: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    letter-spacing: 0.07em;
+    white-space: nowrap;
+    transition: all 0.25s;
+}
+
+.brnd-name:hover {
+    opacity: 0.7;
+}
+
+.quad1::after{
+    content: "chool";
+    display: inline-block;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.25s;
+    vertical-align: text-bottom;
+}
+
+.quad2::after{
+    content: "f";
+    display: inline-block;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.25s;
+    vertical-align: text-bottom;
+}
+
+.quad3::after{
+    content: "ndia";
+    display: inline-block;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.25s;
+    vertical-align: text-bottom;
+}
+
+.school-name:hover .quad1::after{
+    max-width: 5ch;
+}
+.school-name:hover .quad2::after{
+    max-width: 1ch;
+}
+.school-name:hover .quad3::after{
+    max-width: 4ch;
+}
+
+.quad1,
+.quad2,
+.quad3{
+    transition: 0.25 color;
+}
+.quad1:hover{
+    color: rgb(255, 102, 0);
+}
+.quad2:hover{
+    color: rgb(255, 255, 255);
+}
+.quad3:hover{
+    color: rgb(2, 152, 4);
+}
+
+.pages {
+    width: auto;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.pages a.active {
+    font-weight: 650;
+}
+
+.pages a {
+    color: #292929;
+    font-weight: 400;
+    position: relative;
+    text-decoration: none;
+    font-family: 'Montserrat', 'Arial', 'sans-serif';
+    transition: opacity 0.2s,
+        color 0.2s;
+}
+
+.pages a::after {
+    content: "";
+    height: 2.4px;
+    left: 0px;
+    bottom: 0px;
+    width: 0%;
+    background: #fffeff;
+    position: absolute;
+    transition: width 0.3s ease;
+}
+
+.pages a:hover::after {
+    width: 100%;
+}
+
+.pages a:active::after {
+    width: 25%;
+}
+
+.pages-nav {
+    position: sticky;
+    padding: 6px;
+    display: flex;
+    width: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #B0C4DE;
+    border-bottom: 1px solid rgb(147, 197, 253);
+    background: linear-gradient(135deg, #B0C4DE 0%, #ADD8E6 100%);
+    backdrop-filter: blur(7px);
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+.motivation {
+    font-family: 'Funnel Display', Times;
+    color: #F0F4F8;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.content {
+    font-family: 'Poppins', 'Inter', 'Roboto', 'Arial', 'sans-serif';
+    color: #F0F4F8;
+    font-size: 22px;
+    padding: 0px 15px;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+.dev {
+    display: inline-block;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.dev::after {
+    font-weight: 550;
+    content: "\2197";
+}
+
+.dev:hover {
+    opacity: 0.8;
+    transform: translateY(-1px);
+    text-decoration: underline;
+}
+
+.credts {    
+    margin: 10em 0em 0em;
+    width: auto;
+    background-color: #121A2E;
+    padding: 3px;
+    text-align: center; 
+    bottom: 0; /*changes here*/
+    border-top: 1px solid #30363D;
+}
+
+.credts p {
+    font-family: 'Monsterat', 'Inter', 'sans-serif';
+    letter-spacing: 0.05em;
+    color: #fffeff;
+    margin: 6px 0px;
+    font-size: 12px;
+    display: block;
+}
+
+/* .copyright {
+    position: relative;
+    width: 100%;
+    background-color: #121A2E;
+    padding: 4px;
+    text-align: center;
+    bottom: 0;
+    gap: 10px;
+    border-top: 1px solid #30363D;
+} */
+
+/* .copyright p{
+    font-family: 'Monsterat', 'Inter', 'sans-serif';
+    letter-spacing: 0.05em;
+    color: #fffeff;
+    display: inline;
+    font-size: 12px;
+    vertical-align: middle;
+} */
+
+.material-icons-outlined {
+    color: #3b3b3bcc;
+    cursor: pointer;
+    transition: transform 0.2s;
+    user-select: none;
+}
+
+.material-icons-outlined:hover {
+    transform: translateY(-1.5px);
+    opacity: 0.8;
+}
+
+.material-icons-outlined:active {
+    transform: translateY(1px);
+    opacity: 0.645;
+}
+
+/* ------------------- */
+
+.headings-pg2 {
+    text-align: center;
+    color: #C9D1D9;
+    font-size: 40px;
+    size: auto;
+    font-family: 'Inter', 'sans-serif', 'Arial';
+    padding: 20px
+}
+
+.content-2 {
+    font-family: 'Poppins', 'Inter', "sans-serif", 'arial';
+    font-size: 20px;
+    color: #DDE4ED;
+    text-align: center;
+    margin: auto;
+    line-height: 1.2em;
+    max-width: 1200px;
+}
+
+.about-me-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 50px;
+    border: 2px solid #9ACD32;
+}
+
+.info-container {
+    padding: 30px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5rem;
+    border: 2px solid #38BDF8;
+    border-radius: 100px;
+    box-shadow: 0 4px 8px rgb(56, 189, 248, 0.3);
+}
+
+.about {
+    flex: 1;
+}
+.about h2{
+    font-family: 'Funnel Display';
+}
+.about p{
+    font-family: 'Poppins';
+}
+
+.portrait {
+    flex: 0 0 300px;
+    max-width: 400px;
+    min-width: 200px;
+    border-radius: 50px;
+    border: 2px solid #38BDF8;
+}
+
+
+
+.mentors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 20px;
+}
+
+.mentor {
+    width: 300px;
+    padding: 50px;
+    text-align: center;
+    border-radius: 100px;
+    border: 2px solid #7CA2F9;
+}
+
+.mentor img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #7CA2F9;
+}
+
+.mentor h2 {
+    margin: 10px 0 5px;
+    color: #50C878;
+}
+
+.mentor p {
+    color: antiquewhite;
+}
+
+.author {
+    color: #818CF8;
+    font-weight: 550;
+}
+
+.homepagetext {
+    align-content: center;
+}
+
+.divya-link{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition:
+    opacity 0.2s,
+    transform 0.2s,
+    transform-origin 0.2s;
+}
+.divya-link:hover{
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+.divya-link:active{
+    opacity: 0.6;
+    transform: translateY(0.3px);
+}
