@@ -460,7 +460,6 @@ body {
     transition:
     opacity 0.2s,
     transform 0.2s,
-    transform-origin 0.2s;
 }
 .divya-link:hover{
     opacity: 0.8;
