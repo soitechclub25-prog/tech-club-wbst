@@ -362,6 +362,7 @@ body {
 }
 
 .divya-link:hover{
+    z-index: 9999999;
     cursor: pointer;
 }
 
