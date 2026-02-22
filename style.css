@@ -87,9 +87,20 @@ body {
 }
 
 .events-page .main-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    min-height: 0;
+}
+
+.events-page .main-container .wrapper {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.events-page .main-container .wrapper .brnd-name {
+    margin: 0;
 }
 
 .main-header {
